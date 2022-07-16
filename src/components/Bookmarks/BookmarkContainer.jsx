@@ -29,13 +29,13 @@ const BookmarkContainer = () => {
   }, [])
 
   return (
-    <div className="m-14">
-      <h1 className=" text-2xl font-bold text-white"> Reading List </h1>
-      <div className="my-4 grid h-96 grid-cols-1 overflow-y-auto md:grid-cols-2">
+    <div className="">
+      <h1 className=" text-2xl font-bold text-white"> Reading List & Bookmarks </h1>
+      <ul className="my-4 grid h-96 grid-cols-1 overflow-y-auto md:grid-cols-1">
         {data.map((bookmark) => {
           return <BookmarkCard key={bookmark._id} bookmark={bookmark} />
         })}
-      </div>
+      </ul>
     </div>
   )
 }
