@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    background-color: bisque;
+   @apply bg-slate-900;
 }
 .counter {
   @apply font-mono text-center text-4xl text-green-400 dark:text-green-400;

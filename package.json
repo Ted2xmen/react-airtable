@@ -1,5 +1,5 @@
 {
-  "name": "react-tailwind-starter",
+  "name": "react-airtable",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
@@ -15,6 +15,9 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
+    "airtable": "^0.11.4",
+    "axios": "^0.27.2",
+    "moment": "^2.29.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-redux": "^7.2.6",
