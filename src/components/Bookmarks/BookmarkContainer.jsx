@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import BookmarkCard from './BookmarkCard'
+import TitleBar from '../TitleBar'
 
 const BookmarkContainer = () => {
   const [data, setData] = useState([])
@@ -29,9 +30,9 @@ const BookmarkContainer = () => {
   }, [])
 
   return (
-    <div className="">
-      <h1 className=" text-2xl font-bold text-white"> Reading List & Bookmarks </h1>
-      <ul className="my-4 grid h-96 grid-cols-1 overflow-y-auto md:grid-cols-1">
+    <div className="mx-5">
+      <TitleBar label="Yer İmleri & Okuma Listesi" />
+      <ul className="my-4 grid h-96 grid-cols-1 gap-2 overflow-y-auto md:grid-cols-1 2xl:grid-cols-1">
         {data.map((bookmark) => {
           return <BookmarkCard key={bookmark._id} bookmark={bookmark} />
         })}
