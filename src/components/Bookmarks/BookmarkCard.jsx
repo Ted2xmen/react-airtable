@@ -8,12 +8,12 @@ const BookmarkCard = ({ bookmark }) => {
         <li className="my-1 flex flex-row items-center rounded-lg bg-green-700 hover:bg-green-500 md:flex-row lg:flex-row 2xl:flex-row">
           <img
             src={bookmark.media[0].link}
-            className="lg:w-42 w-36 rounded-xl object-contain p-1 md:w-36 xl:w-40"
+            className=" h-20 w-20 rounded-xl object-contain p-1"
             alt={bookmark.title}
           />
           <div className="m-2">
             <h2 className="text-md m-1 font-bold">{bookmark.title}</h2>
-            <span className="text-xs ml-2">
+            <span className="ml-2 text-xs">
               {moment(bookmark.lastUpdate).calendar()}{' '}
             </span>
             <span>

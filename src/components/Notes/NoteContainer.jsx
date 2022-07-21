@@ -3,11 +3,10 @@ import TitleBar from '../TitleBar'
 import NoteCard from './NoteCard'
 
 const NoteContainer = ({ tableData }) => {
-
   return (
-    <div className="">
+    <div className="mx-auto">
       <TitleBar label="Notlar" />
-      <div className="my-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 ">
+      <div className="h-68 w-12/12 my-2 flex space-x-4 overflow-x-auto rounded-lg ">
         {tableData.map((data) => {
           return <NoteCard key={data.id} data={data} />
         })}

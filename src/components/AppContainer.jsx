@@ -8,6 +8,8 @@ import VideoContainer from './Videos/VideoContainer'
 
 const AppContainer = () => {
   const [tableData, setTableData] = useState([])
+  const maxTableItem = 12 // airtable - notes section
+
 
   useEffect(() => {
     var base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE }).base(
@@ -16,17 +18,12 @@ const AppContainer = () => {
 
     base('Projects')
       .select({
-        // Selecting the first 3 records in Grid view:
-        maxRecords: 12,
+        maxRecords: maxTableItem,
         view: 'Grid view',
       })
       .eachPage(
         function page(records, fetchNextPage) {
-          // This function (`page`) will get called for each page of records.
-          setTableData(records)
-          // To fetch the next page of records, call `fetchNextPage`.
-          // If there are more records, `page` will get called again.
-          // If there are no more records, `done` will get called.
+          setTableData(records.reverse()) // show the latest first
           fetchNextPage()
         },
         function done(err) {
@@ -41,11 +38,9 @@ const AppContainer = () => {
   return (
     <div className="mx-auto max-w-8xl text- space-y-6 pt-24 sm:h-full sm:w-full md:h-full md:w-full lg:mx-12 xl:mx-24 2xl:mx-24">
       <Nav />
-
       <NoteContainer tableData={tableData} />
       <BookmarkContainer />
       <VideoContainer />
-
       <GridContainer tableData={tableData} />
     </div>
   )

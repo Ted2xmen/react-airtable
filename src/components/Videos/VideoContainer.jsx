@@ -6,16 +6,16 @@ import TitleBar from '../TitleBar'
 
 const VideoContainer = () => {
   const [videos, setVideo] = useState([])
+  const maxVideoItems = 6
 
   useEffect(() => {
     const { REACT_APP_YOUTUBE } = process.env
 
     const latest = 'PL74ZG4NnebTrLoz4fKX_k8DPKlC9z8he8'
-    const vueID = 'PL74ZG4NnebTpfxyCXYkPtSrNzzN7Ew9kw'
     const youtubeURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${latest}&key=${REACT_APP_YOUTUBE}`
 
     axios.get(youtubeURL).then((res) => {
-      setVideo(res.data.items)
+      setVideo(res.data.items.slice(0, maxVideoItems))
     })
   }, [])
 

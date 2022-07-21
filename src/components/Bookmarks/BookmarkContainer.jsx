@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import BookmarkCard from './BookmarkCard'
 import TitleBar from '../TitleBar'
+import ListCard from './ListCard'
 
 const BookmarkContainer = () => {
   const [data, setData] = useState([])
@@ -37,6 +38,7 @@ const BookmarkContainer = () => {
           return <BookmarkCard key={bookmark._id} bookmark={bookmark} />
         })}
       </ul>
+      {/* <ListCard />  // delete later */}
     </div>
   )
 }
