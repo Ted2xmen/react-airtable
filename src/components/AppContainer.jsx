@@ -1,4 +1,3 @@
-import Nav from '../pages/Nav'
 import { useState, useEffect } from 'react'
 import Airtable from 'airtable'
 import GridContainer from './Grid/GridContainer'
@@ -9,7 +8,6 @@ import VideoContainer from './Videos/VideoContainer'
 const AppContainer = () => {
   const [tableData, setTableData] = useState([])
   const maxTableItem = 12 // airtable - notes section
-
 
   useEffect(() => {
     var base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE }).base(
@@ -33,14 +31,15 @@ const AppContainer = () => {
           }
         }
       )
-  }, []) // airtable 
+  }, []) // airtable
 
   return (
-    <div className="mx-auto max-w-8xl text- space-y-6 pt-24 sm:h-full sm:w-full md:h-full md:w-full lg:mx-12 xl:mx-24 2xl:mx-24">
-      <Nav />
+    <div className="max-w-8xl text- mx-auto space-y-6 pt-24 sm:h-full sm:w-full md:h-full md:w-full lg:mx-12 xl:mx-24 2xl:mx-24">
       <NoteContainer tableData={tableData} />
-      <BookmarkContainer />
-      <VideoContainer />
+   
+      <VideoContainer length={2} />
+    
+     
       <GridContainer tableData={tableData} />
     </div>
   )

@@ -1,31 +1,22 @@
 import React from 'react'
 
-const ListCard = () => {
+const ListCard = ({firefox}) => {
   return (
-    <div>
-      <article className="rounded-xl border border-gray-700 bg-gray-800 p-4">
-        <ul className="mt-4 space-y-2">
+    <div className='w-11/12 py-2'>
+        <ul className="space-y-1">
           <li className="">
             <a
-              href="https://github.com/andrewmcodes/hyperui"
+              href={firefox.uri}
               target="_blank"
               rel="noopener noreferrer"
-              className="block h-full rounded-lg border border-gray-700 p-4 hover:border-pink-600">
-              <img
-                src="https://unavatar.now.sh/twitter/itsmarkmead"
-                className="h-16 w-16 rounded-full"
-                alt=""
-              />
-              <h5 className="font-medium text-white">HyperUI</h5>
+              className="flex items-center space-x-4 h-full rounded-lg border border-gray-700 p-4 hover:border-green-600">
+              <img src={firefox.iconuri} width="35" alt={firefox.title} />
+              <h5 className="font-medium font-serif text-lg text-slate-500">{firefox.title}</h5>
 
-              <p className="mt-1 text-xs font-medium text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-                consequuntur deleniti, unde ab ut in!
-              </p>
+            
             </a>
           </li>
         </ul>
-      </article>
     </div>
   )
 }

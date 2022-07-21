@@ -8,7 +8,7 @@ const NoteCard = ({ data }) => {
   return (
     <>
       {description && (
-        <div className="flex w-1/1 md:w-1/2 xl:w-1/3 flex-shrink-0 flex-col rounded-md bg-green-600 p-4">
+        <div className="flex w-1/1 md:w-1/2 xl:w-1/3 2xl:w-1/3 flex-shrink-0 flex-col rounded-md bg-green-600 p-4">
           <div className="space-y-3 px-2">
             <h2 className="text-lg font-semibold tracking-tight">{Name}</h2>
             <div className="space-x-1">

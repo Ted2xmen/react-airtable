@@ -9,11 +9,11 @@ const Card = ({ data }) => {
   return (
     <>
       {image_url && (
-        <div className="flex flex-col items-center space-y-2 rounded-lg bg-slate-800 p-1 text-gray-300 shadow shadow-green-600">
+        <div className="flex w-11/12 flex-col items-center space-y-2 rounded-lg bg-slate-800 p-1 text-gray-300 shadow shadow-green-600">
           {image_url && (
             <img
               src={image_url}
-              className="w-full rounded-md object-contain shadow"
+              className="w-12/12 rounded-md object-cover shadow"
               alt={Name}
             />
           )}
@@ -37,9 +37,7 @@ const Card = ({ data }) => {
               {moment(created_time).startOf('day').fromNow()}
             </p>
           </div>
-          <div className="h-28 overflow-y-auto p-2  py-2">
-            <p className="text-sm">{description}</p>
-          </div>
+          
         </div>
       )}
     </>

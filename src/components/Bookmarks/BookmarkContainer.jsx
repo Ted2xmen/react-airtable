@@ -32,8 +32,8 @@ const BookmarkContainer = () => {
 
   return (
     <div className="mx-5">
-      <TitleBar label="Yer İmleri & Okuma Listesi" />
-      <ul className="my-4 grid h-96 grid-cols-1 gap-2 overflow-y-auto md:grid-cols-1 2xl:grid-cols-1">
+      <TitleBar label="Bookmarks from Raindrop.io" />
+      <ul className="my-4 grid  grid-cols-1 gap-2  md:grid-cols-1 2xl:grid-cols-1">
         {data.map((bookmark) => {
           return <BookmarkCard key={bookmark._id} bookmark={bookmark} />
         })}
