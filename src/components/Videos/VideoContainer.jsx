@@ -6,8 +6,7 @@ import TitleBar from '../TitleBar'
 import ListCard from '../Bookmarks/ListCard'
 import firefox from './../Bookmarks/firefox.json'
 
-
-const VideoContainer = ({length}) => {
+const VideoContainer = ({ length }) => {
   const [videos, setVideo] = useState([])
   const maxVideoItems = length
 
@@ -24,11 +23,11 @@ const VideoContainer = ({length}) => {
 
   return (
     <>
-      <div className="pt-10 grid grid-cols-1 gap-2 space-y-5 justify-items-center 2xl:justify-items-stretch text-xl text-white md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 ">
+      <div className="xs:space-y-5 grid grid-cols-1 justify-items-center gap-3 pt-10 text-xl text-white md:grid-cols-3  lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 2xl:justify-items-stretch ">
         {videos.map((video, i) => {
           return <VideoCard key={i} video={video} />
         })}
-        <ul className="h-96 my-auto rounded-lg overflow-y-auto ">
+        <ul className="ml-6 pt-3 h-96 overflow-y-auto rounded-lg ">
           {firefox.map((im, i) => {
             return <ListCard key={i} firefox={im} />
           })}

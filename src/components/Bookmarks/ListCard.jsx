@@ -2,7 +2,7 @@ import React from 'react'
 
 const ListCard = ({firefox}) => {
   return (
-    <div className='w-11/12 py-2'>
+    <div className='w-11/12 py-2 '>
         <ul className="space-y-1">
           <li className="">
             <a

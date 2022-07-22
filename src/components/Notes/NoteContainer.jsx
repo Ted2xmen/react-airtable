@@ -4,7 +4,7 @@ import NoteCard from './NoteCard'
 
 const NoteContainer = ({ tableData }) => {
   return (
-    <div className="mx-auto">
+    <div className="mx-2">
       <TitleBar label="Notlar" />
       <div className="h-68 w-12/12 my-2 flex space-x-4 overflow-x-auto rounded-lg ">
         {tableData.map((data) => {
