@@ -36,10 +36,7 @@ const AppContainer = () => {
   return (
     <div className="max-w-8xl text- mx-auto space-y-6 pt-24 sm:h-full sm:w-full md:h-full md:w-full lg:mx-12 xl:mx-24 2xl:mx-24">
       <NoteContainer tableData={tableData} />
-   
       <VideoContainer length={2} />
-    
-     
       <GridContainer tableData={tableData} />
     </div>
   )
